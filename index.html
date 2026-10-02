@@ -371,7 +371,7 @@ function buildSprites(){
     const [c1,c2]=hoppers[k],c=mkCanvas(26,26),g=c.getContext('2d');
     R(g,5,8,16,12,c1);R(g,5,16,16,4,c2);R(g,9,2,8,8,c2);
     R(g,9,11,4,4,'#1a1a2e');R(g,15,11,4,4,'#1a1a2e');
-    SPR['hop_'+k]=c;
+    SPR['hop_'+k]=c;SPR['fly_'+k]=c; // flyers are drawn via 'fly_'+skin — 'hop_' is unused
   });
   // cage, pad, shard, heart
   let c=mkCanvas(40,48),g=c.getContext('2d');
